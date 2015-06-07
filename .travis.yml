@@ -1,6 +1,5 @@
 # NB: don't set `language: haskell` here
 
-# th-typegraph requires template-haskell>=2.9, so ghc-7.6 is too old
 env:
  - CABALVER=1.22 GHCVER=7.10.2
  - CABALVER=head GHCVER=head   # see section about GHC HEAD snapshots
@@ -14,7 +13,7 @@ before_install:
  - travis_retry sudo add-apt-repository -y ppa:hvr/ghc
  - travis_retry sudo apt-get update
  - travis_retry sudo apt-get install cabal-install-$CABALVER ghc-$GHCVER
- - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin
+ - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
 
 install:
  - cabal --version
