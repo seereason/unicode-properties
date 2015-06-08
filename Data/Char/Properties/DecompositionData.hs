@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -O0 #-}
 module Data.Char.Properties.DecompositionData (getDecomposition) where
 {
         import Data.Char.Properties.DecompositionTypes;
